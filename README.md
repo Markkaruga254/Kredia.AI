@@ -63,27 +63,44 @@ Kredia.AI provides Chamas with an objective tool to assess potential members. By
 ---
 
 ## 🏗 Final Architecture
+Kredia.AI operates on a **Decentralized Agentic Workflow**, where the Gemini Orchestrator manages multiple specialized intelligence layers to ensure precision in alternative data processing.
+
 ```text
-      [ USER / TRADER ] 
-              │
-      ( Raw Text Logs )
-              ▼
-      [ VITE + REACT ] <───> [ FIREBASE AUTH ] (Optional)
-      ( Premium Dashboard )
-              │
-      ┌───────┴───────────────────────────────┐
-      │          INTELLIGENCE PIPELINE        │
-      │                                       │
-      │  [ GEMINI 2.0 FLASH ] <──> [ PROMPT ENGINE ]
-      │  ( Extraction & Analysis )     ( KES Context )
-      │                                       │
-      └───────┬───────────────────────────────┘
-              │
-      ( Structured Profile )
-              ▼
-      [ GOOGLE FIRESTORE ] <───> [ HISTORY SIDEBAR ]
-      ( Persistent Storage )        ( Cloud Sync )
+    ┌─────────────────────────────────────────────────────────────┐
+    │                    KREDIA AGENTIC ECOSYSTEM                 │
+    └─────────────────────────────────────────────────────────────┘
+                │                           │
+      [ ALTERNATIVE DATA ]         [ AGENTIC UI LAYER ]
+      ( M-Pesa/SMS/Logs )         ( React/Framer Motion )
+                │                           │
+                ▼                           ▼
+    ┌─────────────────────────────────────────────────────────────┐
+    │             GEMINI INTELLIGENCE ORCHESTRATOR                │
+    ├─────────────────────────────────────────────────────────────┤
+    │  ┌──────────────────┐           ┌──────────────────┐        │
+    │  │  EXTRACTION      │           │  BEHAVIORAL      │        │
+    │  │  AGENT (NLP)     │ ────────▶ │  ANALYSIS AGENT  │        │
+    │  └──────────────────┘           └──────────────────┘        │
+    │          │                               │                  │
+    │          ▼                               ▼                  │
+    │  ┌──────────────────┐           ┌──────────────────┐        │
+    │  │  CONTEXTUAL      │           │  NEURAL SCORING  │        │
+    │  │  PROCESSOR       │ ◀──────── │  LOGIC LAYER     │        │
+    │  └──────────────────┘           └──────────────────┘        │
+    └─────────────────────────────────────────────────────────────┘
+                │                           │
+                ▼                           ▼
+    ┌───────────────────────────┐   ┌───────────────────────────┐
+    │   CLOUD PERSISTENCE HUB   │   │   LENDER DECISION ENGINE  │
+    │   (Google Firestore)      │   │   (Narrative Generation)  │
+    └───────────────────────────┘   └───────────────────────────┘
 ```
+
+### 🧠 The Intelligence Framework
+*   **Extraction Agent**: A specialized prompt-engineered instance of Gemini that performs high-fidelity Named Entity Recognition (NER) on colloquial financial text.
+*   **Behavioral Analysis Agent**: Evaluates the *velocity* and *consistency* of transactions to map business stability.
+*   **Neural Scoring Layer**: A deterministic logic layer that weights AI-extracted features into a standardized 300-850 score.
+*   **Cloud Persistence Hub**: A real-time, distributed NoSQL layer (Firestore) that ensures a permanent, immutable credit history for the trader.
 
 ---
 
