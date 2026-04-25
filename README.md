@@ -124,12 +124,13 @@ Integrated with Firebase Firestore to ensure that every "Integrity Trace" is sto
 
 | Layer | Technology |
 | :--- | :--- |
-| **Frontend** | React 19 + TypeScript |
-| **Build Tool** | Vite 6 |
-| **AI Engine** | Google Gemini (Gemini 2.0 Flash Lite) |
-| **Database** | Firebase Firestore |
+| **Development Tooling** | Google AI Studio & Gemini CLI |
+| **AI Orchestration** | Gemini 2.0 Flash (Agentic Logic) |
+| **Deployment & Scaling** | **Google Cloud Run** (Containerized) |
+| **Infrastructure** | Google Cloud Artifact Registry |
+| **Frontend** | React 19 + Vite (TypeScript) |
+| **Persistence Layer** | Google Firestore (NoSQL) |
 | **Styling** | Tailwind CSS + Framer Motion |
-| **Icons** | Lucide React |
 
 ---
 
@@ -137,11 +138,11 @@ Integrated with Firebase Firestore to ensure that every "Integrity Trace" is sto
 
 | Phase | What Was Built |
 | :--- | :--- |
-| **Phase 1** | Core Intelligence: Prompt engineering for Gemini extraction. |
-| **Phase 2** | Dashboard: Premium React UI with Recharts visualization. |
-| **Phase 3** | Localization: KES currency integration and local business logic. |
-| **Phase 4** | Persistence: Firebase integration for assessment history. |
-| **Phase 5** | Production: Build optimization and GitHub preparation. |
+| **Phase 1** | **Google AI Studio** orchestration: Prompt engineering for Agentic Extraction. |
+| **Phase 2** | Dashboard: Premium React UI with behavioral analytics. |
+| **Phase 3** | Localization: KES currency integration and Chama-specific business logic. |
+| **Phase 4** | Cloud Persistence: **Google Firestore** integration for immutable history. |
+| **Phase 5** | Production: Containerization and deployment to **Google Cloud Run**. |
 
 ---
 
@@ -149,8 +150,9 @@ Integrated with Firebase Firestore to ensure that every "Integrity Trace" is sto
 
 ### 1. Prerequisites
 - Node.js (v18+)
-- A Google AI Studio API Key ([Get it here](https://aistudio.google.com/))
-- A Firebase Project ([Create one here](https://console.firebase.google.com/))
+- **Google Cloud SDK (gcloud)** installed and configured.
+- A Google AI Studio API Key.
+- Google Cloud Credits redeemed in your specific project.
 
 ### 2. Clone and Configure
 ```bash
@@ -168,20 +170,25 @@ npm install
 ```bash
 npm run dev
 ```
-The app will be available at `http://localhost:3000`.
 
 ---
 
 ## 🏭 Running in Production
-To build the project for production deployment (Vercel, Netlify, or Firebase Hosting):
 
-```bash
-# Build the production bundle
-npm run build
+### Deployment to Google Cloud Run
+As per the mandatory hackathon requirements, Kredia.AI is optimized for **Google Cloud Run**.
 
-# Preview the production build locally
-npm run preview
-```
+1.  **Build the Container**:
+    ```bash
+    gcloud builds submit --tag gcr.io/[PROJECT_ID]/kredia-app
+    ```
+
+2.  **Deploy to Cloud Run**:
+    ```bash
+    gcloud run deploy kredia-app --image gcr.io/[PROJECT_ID]/kredia-app --platform managed --allow-unauthenticated
+    ```
+
+3.  **Environment Variables**: Ensure your `VITE_` variables are set in the Cloud Run service configuration to allow the frontend to communicate with Gemini and Firestore.
 
 ---
 
