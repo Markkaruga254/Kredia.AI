@@ -36,7 +36,7 @@
 ---
 
 ## 🌊 Overview
-Kredia.AI is a lightweight AI prototype built to solve the **"Invisible Credit"** problem in the informal economy. While billions of dollars flow through side-hustles, Chamas (informal savings groups), and micro-businesses, these entrepreneurs remain unbankable because their financial history exists only in unstructured formats: **M-Pesa SMS logs, notebook entries, and verbal agreements.**
+Kredia.AI is a lightweight AI prototype built to solve the **"Invisible Credit"** problem in the informal economy. While billions of kenya shillings flow through side-hustles, Chamas (informal savings groups), and micro-businesses, these entrepreneurs remain unbankable because their financial history exists only in unstructured formats: **M-Pesa SMS logs, notebook entries, and verbal agreements.**
 
 Kredia.AI acts as an intelligence bridge, using Large Language Models to convert these alternative data traces into high-fidelity, machine-readable credit profiles.
 
