@@ -16,14 +16,13 @@
 
 </div>
 
-</div>
-
 ---
 
 ## 📋 Table of Contents
 - [🌊 Overview](#-overview)
 - [🎯 Theme Alignment: AI for Finance](#-theme-alignment-ai-for-finance)
 - [🏗 Final Architecture](#-final-architecture)
+- [📸 How to Operate (Live Demo)](#-how-to-operate-live-demo)
 - [✨ Features](#-features)
 - [🛠 Tech Stack](#-tech-stack)
 - [🚀 Development Journey](#-development-journey)
@@ -105,6 +104,29 @@ Kredia.AI operates on a **Decentralized Agentic Workflow**, where the Gemini Orc
 *   **Behavioral Analysis Agent**: Evaluates the *velocity* and *consistency* of transactions to map business stability.
 *   **Neural Scoring Layer**: A deterministic logic layer that weights AI-extracted features into a standardized 300-850 score.
 *   **Cloud Persistence Hub**: A real-time, distributed NoSQL layer (Firestore) that ensures a permanent, immutable credit history for the trader.
+
+---
+
+## 📸 How to Operate (Live Demo)
+Kredia.AI is designed to be intuitive for judges and lenders alike. Here is how you can operate the application during the live demo:
+
+### 1. The Assessment Dashboard
+When you launch the app, you are greeted with the **Amani Intelligence** dashboard. 
+- You can manually type in a trader's logs (e.g., "Sold charcoal for 1500 KES") or click the **"Full Profile Sample"** button to load a pre-configured set of alternative data logs.
+- Click **"Verify Pipeline"** to trigger the Gemini Agentic Orchestrator.
+
+<div align="center">
+  <img src="docs/screenshots/live_dashboard.png" alt="Kredia.AI Live Dashboard" width="800"/>
+</div>
+
+### 2. Persistent Credit History
+Once the assessment is complete, the data is instantly saved to **Google Firestore**. 
+- Click the **"History"** button in the top navigation to view the Cloud Sync in action.
+- You can click on any past "Intelligence Trace" to immediately restore that profile and view its specific risk breakdown and behavioral metrics.
+
+<div align="center">
+  <img src="docs/screenshots/history_sidebar.png" alt="Kredia.AI History Sidebar" width="800"/>
+</div>
 
 ---
 
