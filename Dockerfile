@@ -1,6 +1,25 @@
 # Step 1: Build the React app
 FROM node:18-alpine AS build
 WORKDIR /app
+
+# Accept build arguments for environment variables
+ARG VITE_GEMINI_API_KEY
+ARG VITE_FIREBASE_API_KEY
+ARG VITE_FIREBASE_AUTH_DOMAIN
+ARG VITE_FIREBASE_PROJECT_ID
+ARG VITE_FIREBASE_STORAGE_BUCKET
+ARG VITE_FIREBASE_MESSAGING_SENDER_ID
+ARG VITE_FIREBASE_APP_ID
+
+# Set them as environment variables for the build process
+ENV VITE_GEMINI_API_KEY=$VITE_GEMINI_API_KEY
+ENV VITE_FIREBASE_API_KEY=$VITE_FIREBASE_API_KEY
+ENV VITE_FIREBASE_AUTH_DOMAIN=$VITE_FIREBASE_AUTH_DOMAIN
+ENV VITE_FIREBASE_PROJECT_ID=$VITE_FIREBASE_PROJECT_ID
+ENV VITE_FIREBASE_STORAGE_BUCKET=$VITE_FIREBASE_STORAGE_BUCKET
+ENV VITE_FIREBASE_MESSAGING_SENDER_ID=$VITE_FIREBASE_MESSAGING_SENDER_ID
+ENV VITE_FIREBASE_APP_ID=$VITE_FIREBASE_APP_ID
+
 COPY package*.json ./
 RUN npm install
 COPY . .
@@ -9,9 +28,7 @@ RUN npm run build
 # Step 2: Serve the app using Nginx
 FROM nginx:alpine
 COPY --from=build /app/dist /usr/share/nginx/html
-# Copy a custom nginx config if needed, or use default
 EXPOSE 8080
-# Cloud Run expects the port to be 8080 by default
 RUN sed -i 's/listen       80;/listen       8080;/g' /etc/nginx/conf.d/default.conf
 
 CMD ["nginx", "-g", "daemon off;"]
