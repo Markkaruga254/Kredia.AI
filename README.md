@@ -10,7 +10,11 @@
 [![Gemini AI](https://img.shields.io/badge/Gemini_AI-4285F4?style=for-the-badge&logo=google-gemini&logoColor=white)](https://ai.google.dev/)
 [![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
 
+> **Vision**: To unlock financial dignity for billions by transforming messy, everyday integrity into a global language of credit.
+
 *Traditional credit systems fail the informal sector because they ignore the pulse of the local market. Kredia.AI bridges this gap by converting messy, unstructured business logs into objective, machine-readable credit profiles for micro-entrepreneurs and SMEs.*
+
+</div>
 
 </div>
 
