@@ -18,6 +18,7 @@
 
 ## 📋 Table of Contents
 - [🌊 Overview](#-overview)
+- [🎯 Theme Alignment: AI for Finance](#-theme-alignment-ai-for-finance)
 - [🏗 Final Architecture](#-final-architecture)
 - [✨ Features](#-features)
 - [🛠 Tech Stack](#-tech-stack)
@@ -35,13 +36,29 @@
 ---
 
 ## 🌊 Overview
-Kredia.AI is an intelligence layer designed for the billions of entrepreneurs in the global informal economy. While these businesses generate massive cash flow, their lack of "formal" records (bank statements, tax filings) makes them invisible to lenders.
+Kredia.AI is a lightweight AI prototype built to solve the **"Invisible Credit"** problem in the informal economy. While billions of dollars flow through side-hustles, Chamas (informal savings groups), and micro-businesses, these entrepreneurs remain unbankable because their financial history exists only in unstructured formats: **M-Pesa SMS logs, notebook entries, and verbal agreements.**
 
-**Kredia.AI solves this by:**
-- **Decoding Integrity**: Parsing unstructured text/SMS logs into structured financial events.
-* **Behavioral Credit Scoring**: Calculating risk based on consistency and stability rather than just raw volume.
-* **Human-in-the-Loop AI**: Providing narrative justifications that help lenders understand the *human* behind the numbers.
-* **Financial Identity**: Creating a permanent, cloud-synced history that traders can use as "proof of integrity" for loans.
+Kredia.AI acts as an intelligence bridge, using Large Language Models to convert these alternative data traces into high-fidelity, machine-readable credit profiles.
+
+---
+
+## 🎯 Theme Alignment: AI for Finance
+This project was specifically engineered to address the **AI for Finance** thematic track by focusing on the transition from alternative data to financial trust.
+
+### 📱 Utilization of Alternative Data
+Instead of relying on traditional CRB (Credit Reference Bureau) reports, Kredia.AI uses:
+*   **Simulated M-Pesa Patterns**: Parsing text-based transaction records (e.g., "Received 2000 from Jane Doe" or "Paid 800 for electricity") to establish cash flow.
+*   **SMS Business Records**: Transforming the messy "Inbox" of a mama mboga or side-hustler into a digital ledger.
+*   **Chama Contribution Traces**: Identifying regular payments to social savings groups as a proxy for financial discipline and community-vetted reliability.
+
+### 📈 Predicting Creditworthiness for Side-Hustles
+For a side-hustle, raw income isn't the only metric. Kredia.AI's scoring engine rewards:
+1.  **Consistency (Reliability)**: Regular inflows, even if small, indicate a stable business model.
+2.  **Spending Discipline (Burn Rate)**: Managing expenses relative to income, a key indicator for Chama sustainability.
+3.  **Financial Resilience (Volatility)**: Understanding seasonal dips and peak periods in the local market.
+
+### 🤝 Empowerment for Chamas
+Kredia.AI provides Chamas with an objective tool to assess potential members. By analyzing a member's "Integrity Traces," a Chama can make data-driven decisions on loan disbursements without requiring formal collateral.
 
 ---
 
