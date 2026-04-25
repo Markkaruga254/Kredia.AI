@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@1,400;1,700&family=Outfit:wght@500;700;900&family=JetBrains+Mono:wght@400;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Playfair Display", ui-serif, Georgia, serif;
+  --font-display: "Outfit", ui-serif, Georgia, serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+}
+
+@layer base {
+  body {
+    @apply antialiased text-[#3D3D2E] bg-[#F7F5F2];
+  }
+}
+
+@layer components {
+  .prose {
+    @apply text-[#706B5C] leading-relaxed;
+  }
+  .prose strong {
+    @apply text-[#3D3D2E] font-bold;
+  }
+  .prose blockquote {
+    @apply border-l-4 border-[#8A9A5B] pl-4 italic text-[#706B5C];
+  }
+}
+
