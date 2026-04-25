@@ -128,6 +128,11 @@ Once the assessment is complete, the data is instantly saved to **Google Firesto
   <img src="docs/screenshots/history_sidebar.png" alt="Kredia.AI History Sidebar" width="800"/>
 </div>
 
+### 3. The AI Narrative Summary (Net Analysis)
+Scroll to the bottom of the dashboard to view the **Net Analysis** section. 
+- The system doesn't just output numbers; the Gemini Agentic Orchestrator writes a **human-readable narrative** explaining exactly *why* the score was given.
+- It highlights key insights (like high operating costs or consistent daily sales) to give lenders the human context they need to make a final decision.
+
 ---
 
 ## ✨ Features
