@@ -133,6 +133,10 @@ Scroll to the bottom of the dashboard to view the **Net Analysis** section.
 - The system doesn't just output numbers; the Gemini Agentic Orchestrator writes a **human-readable narrative** explaining exactly *why* the score was given.
 - It highlights key insights (like high operating costs or consistent daily sales) to give lenders the human context they need to make a final decision.
 
+<div align="center">
+  <img src="docs/screenshots/net_analysis.png" alt="Kredia.AI Net Analysis" width="800"/>
+</div>
+
 ---
 
 ## ✨ Features
