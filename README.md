@@ -134,6 +134,11 @@ Scroll to the bottom of the dashboard to view the **Net Analysis** section.
 - It highlights key insights (like high operating costs or consistent daily sales) to give lenders the human context they need to make a final decision.
 
 <div align="center">
+  <img src="docs/screenshots/humanized_narrative.png" alt="Kredia.AI Humanized Narrative" width="800"/>
+  <p><i>The Gemini-powered narrative explains the behavioral nuances behind the credit score, bridging the gap between raw data and lender confidence.</i></p>
+</div>
+
+<div align="center">
   <img src="docs/screenshots/net_analysis.png" alt="Kredia.AI Net Analysis" width="800"/>
 </div>
 
