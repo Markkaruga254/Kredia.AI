@@ -16,6 +16,6 @@ export async function analyzeCreditProfile(textLogs: string[]): Promise<CreditPr
     throw new Error(errorData.error || 'Failed to analyze credit profile');
   }
 
-  const profile = await response.json();
+  const profile = await response.json() as CreditProfile;
   return profile;
 }
