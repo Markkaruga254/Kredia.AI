@@ -19,19 +19,38 @@ Rules:
 - Use current time for timestamps if not specified, but try to infer relative timing if mentioned (e.g., "today", "yesterday").
 `;
 
+const MAX_RAW_INPUT_LENGTH = 20000;
+const MAX_RAW_INPUT_LINES = 500;
+
 export default async function handler(req: any, res: any) {
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method Not Allowed' });
   }
 
   const { rawInput } = req.body;
-  if (!rawInput) {
+  if (rawInput === undefined || rawInput === null) {
     return res.status(400).json({ error: 'Missing rawInput' });
+  }
+  if (typeof rawInput !== 'string') {
+    return res.status(400).json({ error: 'rawInput must be a string' });
+  }
+
+  const normalizedRawInput = rawInput.trim();
+  if (!normalizedRawInput) {
+    return res.status(400).json({ error: 'rawInput cannot be empty' });
+  }
+  if (normalizedRawInput.length > MAX_RAW_INPUT_LENGTH) {
+    return res.status(400).json({ error: `rawInput exceeds maximum length of ${MAX_RAW_INPUT_LENGTH} characters` });
+  }
+
+  const rawInputLineCount = normalizedRawInput.split(/\r?\n/).length;
+  if (rawInputLineCount > MAX_RAW_INPUT_LINES) {
+    return res.status(400).json({ error: `rawInput exceeds maximum line count of ${MAX_RAW_INPUT_LINES}` });
   }
 
   try {
     const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY });
-    const prompt = `Analyze these business logs and generate a full credit profile:\n${rawInput}`;
+    const prompt = `Analyze these business logs and generate a full credit profile:\n${normalizedRawInput}`;
 
     const response = await ai.models.generateContent({
       model: "gemini-3-flash-preview",
