@@ -27,7 +27,7 @@ export async function getAssessmentHistory(): Promise<CreditProfile[]> {
     return querySnapshot.docs.map(doc => ({
       ...doc.data(),
       id: doc.id,
-    })) as CreditProfile[];
+    } as unknown as CreditProfile));
   } catch (e) {
     console.error("Error getting documents: ", e);
     return [];

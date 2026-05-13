@@ -16,6 +16,15 @@
 
 </div>
 
+> **The prototype that started everything.**
+> Kredia.AI proved that Gemini can reliably parse informal M-Pesa
+> transaction language into structured credit data. That proof of
+> concept evolved into Onchain-kredit — which adds a Solidity smart
+> contract trust layer. If you want to see where the idea went next:
+> [Onchain-kredit →](https://github.com/Markkaruga254/Onchain-kredit)
+
+[![Live](https://img.shields.io/badge/Live-Cloud_Run-blue)](https://gdg-build-6375a.web.app)
+
 ---
 
 ## 📋 Table of Contents
@@ -275,14 +284,13 @@ Kredia.AI/
 
 ## 📊 Current Status
 
-| Area | Status | Notes |
-| :--- | :--- | :--- |
-| AI Extraction | ✅ Complete | High accuracy on informal logs. |
-| KES Localization | ✅ Complete | Formatting and local context applied. |
-| Firebase Sync | ✅ Complete | Assessments persisted to Firestore. |
-| User Auth | ⚠️ Partial | Ready for Firebase Auth integration. |
-
----
+| Component | Status |
+|---|---|
+| Gemini agentic pipeline | ✅ Live |
+| M-Pesa / Chama parsing | ✅ Live |
+| Google Cloud Run deployment | ✅ Live |
+| Blockchain / Web3 layer | ➡️ See Onchain-kredit |
+| Server-side API proxy | ✅ Added |
 
 ## 🗺 Roadmap
 
