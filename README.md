@@ -286,11 +286,13 @@ Kredia.AI/
 
 | Component | Status |
 |---|---|
-| Gemini agentic pipeline | ✅ Live |
+| Gemini agentic pipeline | ✅ Live via server-side `/api` proxy |
 | M-Pesa / Chama parsing | ✅ Live |
-| Google Cloud Run deployment | ✅ Live |
+| Frontend + serverless API deployment | ✅ Live |
 | Blockchain / Web3 layer | ➡️ See Onchain-kredit |
-| Server-side API proxy | ✅ Added |
+| Server-side API proxy | ✅ Live (current Gemini integration path) |
+
+> **Deployment note:** The current app runs as a Vite frontend with server-side `/api` routes handling Gemini requests. Earlier README references to direct client-side Gemini calls or Cloud Run containerization are outdated and should be read as historical context, not the current deployment model.
 
 ## 🗺 Roadmap
 
